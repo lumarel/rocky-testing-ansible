@@ -1,0 +1,9 @@
+# Keep roles folder empty
+roles/*
+!roles/requirements.yml
+!roles/requirements.yml.disabled
+
+# Keep collections folder empty
+collections/*
+!collections/requirements.yml
+!collections/requirements.yml.disabled

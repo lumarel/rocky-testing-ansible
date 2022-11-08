@@ -1,0 +1,11 @@
+---
+- name: Start here
+  hosts: all
+
+  handlers:
+    - import_tasks: handlers/main.yml
+
+  tasks:
+    - name: Write the main tasks
+      ansible.builtin.debug:
+        msg: here!
