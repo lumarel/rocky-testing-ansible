@@ -2,48 +2,48 @@
 module_streams:
   # AppStream
   - name: 389-ds
-    stream: 1.4
+    stream: '1.4'
   - name: ant
-    stream: 1.10
+    stream: '1.10'
     profile: common
   - name: container-tools
     stream: rhel8
     profile: common
   - name: container-tools
-    stream: 1.0
+    stream: '1.0'
     profile: common
   - name: container-tools
-    stream: 2.0
+    stream: '2.0'
     profile: common
   - name: container-tools
-    stream: 3.0
+    stream: '3.0'
     profile: common
   - name: container-tools
-    stream: 4.0
+    stream: '4.0'
     profile: common
   - name: eclipse
     stream: rhel8
     profile: java
   - name: freeradius
-    stream: 3.0
+    stream: '3.0'
     profile: server
   - name: gimp
-    stream: 2.8
+    stream: '2.8'
     profile: common
   - name: gimp
-    stream: 2.8
+    stream: '2.8'
     profile: devel
   - name: go-toolset
     stream: rhel8
     profile: common
   - name: httpd
-    stream: 2.4
+    stream: '2.4'
     profile: common
   - name: httpd
-    stream: 2.4
+    stream: '2.4'
     profile: devel
   - name: httpd
-    stream: 2.4
+    stream: '2.4'
     profile: minimal
   - name: idm
     stream: DL1
@@ -59,15 +59,15 @@ module_streams:
     profile: dns
   - name: idm
     stream: DL1
-    profile: server
+    profile: server10
   - name: idm
     stream: client
     profile: common
   - name: inkscape
-    stream: 0.92.3
+    stream: '0.92.3'
     profile: common
   - name: javapackages-runtime
-    stream: 201801
+    stream: '201801'
     profile: common
   - name: jmc
     stream: rhel8
@@ -76,346 +76,346 @@ module_streams:
     stream: rhel8
     profile: core
   - name: libselinux-python
-    stream: 2.8
+    stream: '2.8'
     profile: common
   - name: llvm-toolset
     stream: rhel8
     profile: common
   - name: log4j
-    stream: 2
+    stream: '2'
     profile: common
   - name: mailman
-    stream: 2.1
+    stream: '2.1'
     profile: common
   - name: mariadb
-    stream: 10.3
+    stream: '10.3'
     profile: client
   - name: mariadb
-    stream: 10.3
+    stream: '10.3'
     profile: galera
   - name: mariadb
-    stream: 10.3
+    stream: '10.3'
     profile: server
   - name: mariadb
-    stream: 10.5
+    stream: '10.5'
     profile: client
   - name: mariadb
-    stream: 10.5
+    stream: '10.5'
     profile: galera
   - name: mariadb
-    stream: 10.5
+    stream: '10.5'
     profile: server
   - name: maven
-    stream: 3.5
+    stream: '3.5'
     profile: common
   - name: maven
-    stream: 3.6
+    stream: '3.6'
     profile: common
   - name: maven
-    stream: 3.8
+    stream: '3.8'
     profile: common
   - name: mercurial
-    stream: 4.8
+    stream: '4.8'
     profile: common
   - name: mercurial
-    stream: 6.2
+    stream: '6.2'
     profile: common
   - name: mod_auth_openidc
-    stream: 2.3
+    stream: '2.3'
   - name: mysql
-    stream: 8.0
+    stream: '8.0'
     profile: client
   - name: mysql
-    stream: 8.0
+    stream: '8.0'
     profile: server
   - name: nginx
-    stream: 1.14
+    stream: '1.14'
     profile: common
   - name: nginx
-    stream: 1.16
+    stream: '1.16'
     profile: common
   - name: nginx
-    stream: 1.18
+    stream: '1.18'
     profile: common
   - name: nginx
-    stream: 1.20
+    stream: '1.20'
     profile: common
   - name: nodejs
-    stream: 10
+    stream: '10'
     profile: common
   - name: nodejs
-    stream: 10
+    stream: '10'
     profile: development
   - name: nodejs
-    stream: 10
+    stream: '10'
     profile: minimal
   - name: nodejs
-    stream: 10
+    stream: '10'
     profile: s2i
   - name: nodejs
-    stream: 12
+    stream: '12'
     profile: common
   - name: nodejs
-    stream: 12
+    stream: '12'
     profile: development
   - name: nodejs
-    stream: 12
+    stream: '12'
     profile: minimal
   - name: nodejs
-    stream: 12
+    stream: '12'
     profile: s2i
   - name: nodejs
-    stream: 14
+    stream: '14'
     profile: common
   - name: nodejs
-    stream: 14
+    stream: '14'
     profile: development
   - name: nodejs
-    stream: 14
+    stream: '14'
     profile: minimal
   - name: nodejs
-    stream: 14
+    stream: '14'
     profile: s2i
   - name: nodejs
-    stream: 16
+    stream: '16'
     profile: common
   - name: nodejs
-    stream: 16
+    stream: '16'
     profile: development
   - name: nodejs
-    stream: 16
+    stream: '16'
     profile: minimal
   - name: nodejs
-    stream: 16
+    stream: '16'
     profile: s2i
   - name: nodejs
-    stream: 18
+    stream: '18'
     profile: common
   - name: nodejs
-    stream: 18
+    stream: '18'
     profile: development
   - name: nodejs
-    stream: 18
+    stream: '18'
     profile: minimal
   - name: nodejs
-    stream: 18
+    stream: '18'
     profile: s2i
   - name: parfait
-    stream: 0.5
+    stream: '0.5'
     profile: common
   - name: perl
-    stream: 5.24
+    stream: '5.24'
     profile: common
   - name: perl
-    stream: 5.24
+    stream: '5.24'
     profile: minimal
   - name: perl
-    stream: 5.26
+    stream: '5.26'
     profile: common
   - name: perl
-    stream: 5.26
+    stream: '5.26'
     profile: minimal
   - name: perl
-    stream: 5.30
+    stream: '5.30'
     profile: common
   - name: perl
-    stream: 5.30
+    stream: '5.30'
     profile: minimal
   - name: perl
-    stream: 5.32
+    stream: '5.32'
     profile: common
   - name: perl
-    stream: 5.32
+    stream: '5.32'
     profile: minimal
   - name: perl-App-cpanminus
-    stream: 1.7044
+    stream: '1.7044'
     profile: common
   - name: perl-DBD-MySQL
-    stream: 4.046
+    stream: '4.046'
     profile: common
   - name: perl-DBD-Pg
-    stream: 3.7
+    stream: '3.7'
     profile: common
   - name: perl-DBD-SQLite
-    stream: 1.58
+    stream: '1.58'
     profile: common
   - name: perl-DBI
-    stream: 1.641
+    stream: '1.641'
     profile: common
   - name: perl-FCGI
-    stream: 0.78
+    stream: '0.78'
     profile: common
   - name: perl-IO-Socket-SSL
-    stream: 2.066
+    stream: '2.066'
     profile: common
   - name: perl-YAML
-    stream: 1.24
+    stream: '1.24'
     profile: common
   - name: perl-libwww-perl
-    stream: 6.34
+    stream: '6.34'
     profile: common
   - name: php
-    stream: 7.2
+    stream: '7.2'
     profile: common
   - name: php
-    stream: 7.2
+    stream: '7.2'
     profile: devel
   - name: php
-    stream: 7.2
+    stream: '7.2'
     profile: minimal
   - name: php
-    stream: 7.3
+    stream: '7.3'
     profile: common
   - name: php
-    stream: 7.3
+    stream: '7.3'
     profile: devel
   - name: php
-    stream: 7.3
+    stream: '7.3'
     profile: minimal
   - name: php
-    stream: 7.4
+    stream: '7.4'
     profile: common
   - name: php
-    stream: 7.4
+    stream: '7.4'
     profile: devel
   - name: php
-    stream: 7.4
+    stream: '7.4'
     profile: minimal
   - name: php
-    stream: 8.0
+    stream: '8.0'
     profile: common
   - name: php
-    stream: 8.0
+    stream: '8.0'
     profile: devel
   - name: php
-    stream: 8.0
+    stream: '8.0'
     profile: minimal
   - name: pki-core
-    stream: 10.6
+    stream: '10.6'
   - name: pki-deps
-    stream: 10.6
+    stream: '10.6'
   - name: pmdk
     stream: 1_fileformat_v6
   - name: postgresql
-    stream: 9.6
+    stream: '9.6'
     profile: client
   - name: postgresql
-    stream: 9.6
+    stream: '9.6'
     profile: server
   - name: postgresql
-    stream: 10
+    stream: '10'
     profile: client
   - name: postgresql
-    stream: 10
+    stream: '10'
     profile: server
   - name: postgresql
-    stream: 12
+    stream: '12'
     profile: client
   - name: postgresql
-    stream: 12
+    stream: '12'
     profile: server
   - name: postgresql
-    stream: 13
+    stream: '13'
     profile: client
   - name: postgresql
-    stream: 13
+    stream: '13'
     profile: server
   - name: python27
-    stream: 2.7
+    stream: '2.7'
     profile: common
   - name: python36
-    stream: 3.6
+    stream: '3.6'
     profile: build
   - name: python36
-    stream: 3.6
+    stream: '3.6'
     profile: common
   - name: python38
-    stream: 3.8
+    stream: '3.8'
     profile: build
   - name: python38
-    stream: 3.8
+    stream: '3.8'
     profile: common
   - name: python39
-    stream: 3.9
+    stream: '3.9'
     profile: build
   - name: python39
-    stream: 3.9
+    stream: '3.9'
     profile: common
   - name: redis
-    stream: 5
+    stream: '5'
     profile: common
   - name: redis
-    stream: 6
+    stream: '6'
     profile: common
   - name: rhn-tools
-    stream: 1.0
+    stream: '1.0'
     profile: common
   - name: ruby
-    stream: 2.5
+    stream: '2.5'
     profile: common
   - name: ruby
-    stream: 2.6
+    stream: '2.6'
     profile: common
   - name: ruby
-    stream: 2.7
+    stream: '2.7'
     profile: common
   - name: ruby
-    stream: 3.0
+    stream: '3.0'
     profile: common
   - name: ruby
-    stream: 3.1
+    stream: '3.1'
     profile: common
   - name: rust-toolset
     stream: rhel8
     profile: common
   - name: satellite-5-client
-    stream: 1.0
+    stream: '1.0'
     profile: common
   - name: satellite-5-client
-    stream: 1.0
+    stream: '1.0'
     profile: gui
   - name: scala
-    stream: 2.10
+    stream: '2.10'
     profile: common
   - name: squid
-    stream: 4
+    stream: '4'
     profile: common
   - name: subversion
-    stream: 1.10
+    stream: '1.10'
     profile: common
   - name: subversion
-    stream: 1.10
+    stream: '1.10'
     profile: server
   - name: subversion
-    stream: 1.14
+    stream: '1.14'
     profile: common
   - name: subversion
-    stream: 1.14
+    stream: '1.14'
     profile: server
   - name: swig
-    stream: 3.0
+    stream: '3.0'
     profile: common
   - name: swig
-    stream: 3.0
+    stream: '3.0'
     profile: complete
   - name: swig
-    stream: 4.0
+    stream: '4.0'
     profile: common
   - name: swig
-    stream: 4.0
+    stream: '4.0'
     profile: complete
   - name: varnish
-    stream: 6
+    stream: '6'
     profile: common
   - name: virt
     stream: rhel
     profile: common
   # PowerTools
   - name: mariadb-devel
-    stream: 10.3
+    stream: '10.3'
   - name: python38-devel
-    stream: 3.8
+    stream: '3.8'
   - name: python39
-    stream: 3.9
+    stream: '3.9'
   - name: virt-devel
     stream: rhel
