@@ -1,0 +1,6 @@
+{
+    "[ansible]": {
+        "editor.tabSize": 2
+    },
+    "python.pythonPath": "/usr/bin/python3"
+}
