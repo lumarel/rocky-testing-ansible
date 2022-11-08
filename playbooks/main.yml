@@ -11,7 +11,7 @@
           - vcenter_systemname | mandatory
   tasks:
     - name: Setup
-      ansible.builtin.include_tasks: setup.yml
+      ansible.builtin.include_tasks: tasks/setup.yml
 
 - name: Module check tasks
   hosts: temporary
@@ -26,4 +26,4 @@
   tasks:
     - name: Module checks
       with_items: "{{ module_streams }}"
-      ansible.builtin.include_tasks: module_checks.yml
+      ansible.builtin.include_tasks: tasks/module_checks.yml
