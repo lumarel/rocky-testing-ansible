@@ -7,6 +7,7 @@
   when: item.profile is defined
 
 # - name: Install package
+#   become: true
 #   ansible.builtin.dnf:
 #     name: "@{{ item.name }}:{{ item.stream }}"
 #     state: present
