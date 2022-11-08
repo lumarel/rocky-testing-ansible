@@ -7,6 +7,9 @@ module_streams:
     stream: 1.10
     profile: common
   - name: container-tools
+    stream: rhel8
+    profile: common
+  - name: container-tools
     stream: 1.0
     profile: common
   - name: container-tools
@@ -108,8 +111,14 @@ module_streams:
   - name: maven
     stream: 3.6
     profile: common
+  - name: maven
+    stream: 3.8
+    profile: common
   - name: mercurial
     stream: 4.8
+    profile: common
+  - name: mercurial
+    stream: 6.2
     profile: common
   - name: mod_auth_openidc
     stream: 2.3
@@ -139,7 +148,7 @@ module_streams:
     profile: development
   - name: nodejs
     stream: 10
-    profile: mini Javascript runtime mal
+    profile: minimal
   - name: nodejs
     stream: 10
     profile: s2i
@@ -151,7 +160,7 @@ module_streams:
     profile: development
   - name: nodejs
     stream: 12
-    profile: mini Javascript runtime mal
+    profile: minimal
   - name: nodejs
     stream: 12
     profile: s2i
@@ -163,7 +172,7 @@ module_streams:
     profile: development
   - name: nodejs
     stream: 14
-    profile: mini Javascript runtime mal
+    profile: minimal
   - name: nodejs
     stream: 14
     profile: s2i
@@ -175,9 +184,21 @@ module_streams:
     profile: development
   - name: nodejs
     stream: 16
-    profile: mini Javascript runtime mal
+    profile: minimal
   - name: nodejs
     stream: 16
+    profile: s2i
+  - name: nodejs
+    stream: 18
+    profile: common
+  - name: nodejs
+    stream: 18
+    profile: development
+  - name: nodejs
+    stream: 18
+    profile: minimal
+  - name: nodejs
+    stream: 18
     profile: s2i
   - name: parfait
     stream: 0.5
@@ -340,6 +361,9 @@ module_streams:
     profile: common
   - name: ruby
     stream: 3.0
+    profile: common
+  - name: ruby
+    stream: 3.1
     profile: common
   - name: rust-toolset
     stream: rhel8
