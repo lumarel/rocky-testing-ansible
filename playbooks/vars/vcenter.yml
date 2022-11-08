@@ -1,0 +1,3 @@
+---
+vcenter_datacenter: datacenter
+vcenter_folder: /datacenter/vm/general-os/rocky-testing
