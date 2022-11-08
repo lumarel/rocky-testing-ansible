@@ -10,51 +10,8 @@
         that:
           - vcenter_systemname | mandatory
   tasks:
-    - name: Make sure the system is powered off
-      community.vmware.vmware_guest:
-        datacenter: "{{ vcenter_datacenter }}"
-        name: "{{ vcenter_systemname }}"
-        folder: "{{ vcenter_folder }}"
-        state: powered-off
-
-    - name: Make sure the used snapshot name is not used
-      community.vmware.vmware_guest_snapshot:
-        datacenter: "{{ vcenter_datacenter }}"
-        name: "{{ vcenter_systemname }}"
-        folder: "{{ vcenter_folder }}"
-        snapshot_name: ansible_snapshot
-        state: absent
-
-    - name: Create the snapshot
-      community.vmware.vmware_guest_snapshot:
-        datacenter: "{{ vcenter_datacenter }}"
-        name: "{{ vcenter_systemname }}"
-        folder: "{{ vcenter_folder }}"
-        snapshot_name: ansible_snapshot
-
-    - name: Make sure the system is powered on
-      community.vmware.vmware_guest:
-        datacenter: "{{ vcenter_datacenter }}"
-        name: "{{ vcenter_systemname }}"
-        folder: "{{ vcenter_folder }}"
-        state: powered-on
-        wait_for_ip_address: true
-
-    - name: Get VM Infos
-      community.vmware.vmware_guest_tools_wait:
-        datacenter: "{{ vcenter_datacenter }}"
-        name: "{{ vcenter_systemname }}"
-        folder: "{{ vcenter_folder }}"
-      register: vm_guest_info
-      until: vm_guest_info['instance']['ipv4'] | default(False)
-      retries: 25
-      delay: 5
-
-    - name: Add VM to temporary inventory
-      ansible.builtin.add_host:
-        hostname: "{{ vm_guest_info['instance']['ipv4'] }}"
-        groups:
-          - temporary
+    - name: Setup
+      ansible.builtin.include_tasks: setup.yml
 
 - name: Module check tasks
   hosts: temporary
@@ -68,34 +25,5 @@
           - vcenter_systemname | mandatory
   tasks:
     - name: Module checks
-      loop: "{{ module_streams }}"
-      block:
-        - name: Install package
-          ansible.builtin.dnf:
-            name: "@{{ item.name }}:{{ item.stream }}/{{ item.profile }}"
-            state: present
-          when: item.profile is defined
-
-        - name: Install package
-          ansible.builtin.dnf:
-            name: "@{{ item.name }}:{{ item.stream }}"
-            state: present
-          when: item.profile is undefined
-
-        - name: Revert to snapshot
-          community.vmware.vmware_guest_snapshot:
-            datacenter: "{{ vcenter_datacenter }}"
-            name: "{{ vcenter_systemname }}"
-            folder: "{{ vcenter_folder }}"
-            snapshot_name: ansible_snapshot
-            state: revert
-          delegate_to: localhost
-
-        - name: Make sure the system is powered on
-          community.vmware.vmware_guest:
-            datacenter: "{{ vcenter_datacenter }}"
-            name: "{{ vcenter_systemname }}"
-            folder: "{{ vcenter_folder }}"
-            state: powered-on
-            wait_for_ip_address: true
-          delegate_to: localhost
+      with_items: "{{ module_streams }}"
+      ansible.builtin.include_tasks: module_checks.yml

@@ -1,0 +1,30 @@
+---
+- name: Install package
+  ansible.builtin.dnf:
+    name: "@{{ item.name }}:{{ item.stream }}/{{ item.profile }}"
+    state: present
+  when: item.profile is defined
+
+- name: Install package
+  ansible.builtin.dnf:
+    name: "@{{ item.name }}:{{ item.stream }}"
+    state: present
+  when: item.profile is undefined
+
+- name: Revert to snapshot
+  community.vmware.vmware_guest_snapshot:
+    datacenter: "{{ vcenter_datacenter }}"
+    name: "{{ vcenter_systemname }}"
+    folder: "{{ vcenter_folder }}"
+    snapshot_name: ansible_snapshot
+    state: revert
+  delegate_to: localhost
+
+- name: Make sure the system is powered on
+  community.vmware.vmware_guest:
+    datacenter: "{{ vcenter_datacenter }}"
+    name: "{{ vcenter_systemname }}"
+    folder: "{{ vcenter_folder }}"
+    state: powered-on
+    wait_for_ip_address: true
+  delegate_to: localhost
