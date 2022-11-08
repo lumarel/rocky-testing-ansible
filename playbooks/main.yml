@@ -68,7 +68,7 @@
           - vcenter_systemname | mandatory
   tasks:
     - name: Module checks
-      with_items: "{{ module_streams }}"
+      loop: "{{ module_streams }}"
       block:
         - name: Install package
           ansible.builtin.dnf:
