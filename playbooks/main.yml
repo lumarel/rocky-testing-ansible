@@ -15,7 +15,6 @@
 
 - name: Module check tasks
   hosts: temporary
-  become: true
   vars_files:
     - vars/vcenter.yml
     - vars/modules.yml

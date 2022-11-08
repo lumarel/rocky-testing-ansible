@@ -1,5 +1,6 @@
 ---
 - name: Install package
+  become: true
   ansible.builtin.dnf:
     name: "@{{ item.name }}:{{ item.stream }}/{{ item.profile }}"
     state: present
