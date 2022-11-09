@@ -1,6 +1,6 @@
 # Ansible Rocky Testing tools
 
-This ansible-playbook takes care of everything around deploying a bare linux machine (ubuntu/centos) and adding it to a centralized SSSD (Active Directory) environment
+This ansible-playbook takes care of any tasks that may appear for Rocky testing. These are intended to be run on a AWX instance.
 
 ## Structure
 
@@ -24,7 +24,7 @@ This ansible-playbook takes care of everything around deploying a bare linux mac
 
 ### Ansible version usage
 
-Used Ansible version is 4.0 (ansible-core 2.11.1)
+Used Ansible version is 5.0 (ansible-core 2.12)
 
 Due to this also the FQCNs are used, to not run in any problems with same naming.
 
@@ -93,7 +93,7 @@ name: default
 
 steps:
   - name: ansible-check
-    image: quay.io/ansible/toolset:3.4.1
+    image: quay.io/lumarel/ee-lint:stable-2.12
     commands:
       - "[ -f './collections/requirements.yml' ] && ansible-galaxy install -r ./collections/requirements.yml || echo 'No requirements file active.'"
       - "[ -f './roles/requirements.yml' ] && ansible-galaxy install -r ./roles/requirements.yml || echo 'No requirements file active.'"
