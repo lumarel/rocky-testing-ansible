@@ -59,7 +59,7 @@ module_streams:
     profile: dns
   - name: idm
     stream: DL1
-    profile: server10
+    profile: server
   - name: idm
     stream: client
     profile: common
