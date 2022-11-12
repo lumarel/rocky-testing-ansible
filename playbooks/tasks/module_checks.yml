@@ -1,18 +1,35 @@
 ---
 - name: Install package
   become: true
+  ignore_errors: true
+  when: item.profile is defined
   ansible.builtin.dnf:
     name: "@{{ item.name }}:{{ item.stream }}/{{ item.profile }}"
     state: present
-  when: item.profile is defined
-  ignore_errors: true
 
-# - name: Install package
-#   become: true
-#   ansible.builtin.dnf:
-#     name: "@{{ item.name }}:{{ item.stream }}"
-#     state: present
-#   when: item.profile is undefined
+- name: Profile less streams
+  when: item.profile is undefined
+  block:
+    - name: Enable module stream
+      become: true
+      ansible.builtin.copy:
+        content: |
+          [{{ item.name }}]
+          name={{ item.name }}
+          stream={{ item.stream }}
+          profiles=
+          state=enabled
+        dest: "/etc/dnf/modules.d/{{ item.name }}.module"
+        owner: root
+        group: root
+        mode: o=rw,g=r,o=r
+
+    - name: Install packages
+      become: true
+      ignore_errors: true
+      ansible.builtin.dnf:
+        name: "{{ item.packages }}"
+        state: present
 
 - name: Revert to snapshot
   community.vmware.vmware_guest_snapshot:

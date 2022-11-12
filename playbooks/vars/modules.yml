@@ -3,6 +3,10 @@ module_streams:
   # AppStream
   - name: 389-ds
     stream: '1.4'
+    packages:
+      - 389-ds-base-devel
+      - 389-ds-base-legacy-tools
+      - 389-ds-base-snmp
   - name: ant
     stream: '1.10'
     profile: common
@@ -122,6 +126,9 @@ module_streams:
     profile: common
   - name: mod_auth_openidc
     stream: '2.3'
+    packages:
+      - cjose-devel
+      - mod_auth_openidc
   - name: mysql
     stream: '8.0'
     profile: client
@@ -292,10 +299,26 @@ module_streams:
     profile: minimal
   - name: pki-core
     stream: '10.6'
+    packages:
+      - ldapjdk
+      - pki-acme
+      - pki-base
+      - pki-kra
   - name: pki-deps
     stream: '10.6'
+    packages:
+      - bea-stax-api
+      - glassfish-jaxb-api
+      - glassfish-jaxb-runtime
+      - pki-servlet-engine
+      - velocity
   - name: pmdk
     stream: 1_fileformat_v6
+    packages:
+      - daxio
+      - pmdk
+      - pmempool
+      - rpmemd
   - name: postgresql
     stream: '9.6'
     profile: client
@@ -413,9 +436,29 @@ module_streams:
   # PowerTools
   - name: mariadb-devel
     stream: '10.3'
+    packages:
+      - mariadb-devel
   - name: python38-devel
     stream: '3.8'
+    packages:
+      - pytest
+      - python-packaging
+      - python38-packaging
+      - python38-pytest
   - name: python39
     stream: '3.9'
+    packages:
+      - Cython
+      - pytest
+      - python-packaging
+      - python39-Cython
+      - python39-packaging
+      - python39-pytest
   - name: virt-devel
     stream: rhel
+    packages:
+      - hivex
+      - hivex-devel
+      - qemu-kvm-tests
+      - netcf
+      - netcf-devel
