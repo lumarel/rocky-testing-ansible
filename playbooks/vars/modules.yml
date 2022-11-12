@@ -442,7 +442,7 @@ module_streams:
     packages:
       - python38-packaging
       - python38-pytest
-  - name: python39
+  - name: python39-devel
     stream: '3.9'
     packages:
       - python39-Cython
