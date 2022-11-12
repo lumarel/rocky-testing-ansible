@@ -316,7 +316,6 @@ module_streams:
     stream: 1_fileformat_v6
     packages:
       - daxio
-      - pmdk
       - pmempool
       - rpmemd
   - name: postgresql
@@ -441,16 +440,11 @@ module_streams:
   - name: python38-devel
     stream: '3.8'
     packages:
-      - pytest
-      - python-packaging
       - python38-packaging
       - python38-pytest
   - name: python39
     stream: '3.9'
     packages:
-      - Cython
-      - pytest
-      - python-packaging
       - python39-Cython
       - python39-packaging
       - python39-pytest
@@ -459,6 +453,5 @@ module_streams:
     packages:
       - hivex
       - hivex-devel
-      - qemu-kvm-tests
       - netcf
       - netcf-devel
