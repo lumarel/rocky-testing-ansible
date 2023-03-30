@@ -450,12 +450,7 @@ module_streams:
   # PowerTools
   - name: javapackages-tools
     stream: '201801'
-    packages:
-      - ant-testutil
-      - antlr-tool
-      - plexus-bsh-factory
-      - spec-version-maven-plugin
-      - velocity
+    profile: common
   - name: mariadb-devel
     stream: '10.3'
     packages:
