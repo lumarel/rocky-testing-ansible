@@ -435,6 +435,7 @@ module_streams:
     profile: common
   - name: swig
     stream: '4.0'
+    profile: complete
   - name: swig
     stream: '4.1'
     profile: common
