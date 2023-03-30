@@ -73,6 +73,9 @@ module_streams:
   - name: javapackages-runtime
     stream: '201801'
     profile: common
+  - name: jaxb
+    stream: '4'
+    profile: common
   - name: jmc
     stream: rhel8
     profile: common
@@ -126,9 +129,7 @@ module_streams:
     profile: common
   - name: mod_auth_openidc
     stream: '2.3'
-    packages:
-      - cjose-devel
-      - mod_auth_openidc
+    profile: default
   - name: mysql
     stream: '8.0'
     profile: client
@@ -146,6 +147,9 @@ module_streams:
     profile: common
   - name: nginx
     stream: '1.20'
+    profile: common
+  - name: nginx
+    stream: '1.22'
     profile: common
   - name: nodejs
     stream: '10'
@@ -255,11 +259,11 @@ module_streams:
   - name: perl-IO-Socket-SSL
     stream: '2.066'
     profile: common
-  - name: perl-YAML
-    stream: '1.24'
-    profile: common
   - name: perl-libwww-perl
     stream: '6.34'
+    profile: common
+  - name: perl-YAML
+    stream: '1.24'
     profile: common
   - name: php
     stream: '7.2'
@@ -341,6 +345,12 @@ module_streams:
     profile: client
   - name: postgresql
     stream: '13'
+    profile: server
+  - name: postgresql
+    stream: '15'
+    profile: client
+  - name: postgresql
+    stream: '15'
     profile: server
   - name: python27
     stream: '2.7'
@@ -425,6 +435,11 @@ module_streams:
     profile: common
   - name: swig
     stream: '4.0'
+  - name: swig
+    stream: '4.1'
+    profile: common
+  - name: swig
+    stream: '4.1'
     profile: complete
   - name: varnish
     stream: '6'
@@ -433,6 +448,14 @@ module_streams:
     stream: rhel
     profile: common
   # PowerTools
+  - name: javapackages-tools
+    stream: '201801'
+    packages:
+      - ant-testutil
+      - antlr-tool
+      - plexus-bsh-factory
+      - spec-version-maven-plugin
+      - velocity
   - name: mariadb-devel
     stream: '10.3'
     packages:
@@ -448,6 +471,12 @@ module_streams:
       - python39-Cython
       - python39-packaging
       - python39-pytest
+  - name: subversion-devel
+    stream: '1.10'
+    packages:
+      - libserf-devel
+      - subversion-devel
+      - utf8proc-devel
   - name: virt-devel
     stream: rhel
     packages:
