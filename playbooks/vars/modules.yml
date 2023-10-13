@@ -211,6 +211,18 @@ module_streams_8:
   - name: nodejs
     stream: '18'
     profile: s2i
+  - name: nodejs
+    stream: '20'
+    profile: common
+  - name: nodejs
+    stream: '20'
+    profile: development
+  - name: nodejs
+    stream: '20'
+    profile: minimal
+  - name: nodejs
+    stream: '20'
+    profile: s2i
   - name: parfait
     stream: '0.5'
     profile: common
