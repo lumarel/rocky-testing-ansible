@@ -1,5 +1,5 @@
 ---
-- name: vCenter setup tasks
+- name: Setup vCenter tasks
   hosts: localhost
   gather_facts: false
   vars_files:
