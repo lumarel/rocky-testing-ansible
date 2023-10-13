@@ -512,6 +512,18 @@ module_streams_9:
   - name: nodejs
     stream: '18'
     profile: s2i
+  - name: nodejs
+    stream: '20'
+    profile: common
+  - name: nodejs
+    stream: '20'
+    profile: development
+  - name: nodejs
+    stream: '20'
+    profile: minimal
+  - name: nodejs
+    stream: '20'
+    profile: s2i
   - name: php
     stream: '8.1'
     profile: common
@@ -527,6 +539,9 @@ module_streams_9:
   - name: postgresql
     stream: '15'
     profile: server
+  - name: redis
+    stream: '7'
+    profile: common
   - name: ruby
     stream: '3.1'
     profile: common
