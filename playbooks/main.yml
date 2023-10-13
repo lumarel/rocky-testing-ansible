@@ -25,5 +25,5 @@
           - vcenter_systemname | mandatory
   tasks:
     - name: Module checks
-      with_items: "{{ module_streams }}"
+      with_items: "{{ vars['module_streams_' + ansible_distribution_major_version] }}"
       ansible.builtin.include_tasks: tasks/module_checks.yml

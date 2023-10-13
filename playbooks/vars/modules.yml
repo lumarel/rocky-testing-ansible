@@ -1,5 +1,5 @@
 ---
-module_streams:
+module_streams_8:
   # AppStream
   - name: 389-ds
     stream: '1.4'
@@ -480,3 +480,48 @@ module_streams:
       - hivex-devel
       - netcf
       - netcf-devel
+module_streams_9:
+  # AppStream
+  - name: maven
+    stream: '3.8'
+    profile: common
+  - name: nginx
+    stream: '1.22'
+    profile: common
+  - name: nodejs
+    stream: '18'
+    profile: common
+  - name: nodejs
+    stream: '18'
+    profile: development
+  - name: nodejs
+    stream: '18'
+    profile: minimal
+  - name: nodejs
+    stream: '18'
+    profile: s2i
+  - name: php
+    stream: '8.1'
+    profile: common
+  - name: php
+    stream: '8.1'
+    profile: devel
+  - name: php
+    stream: '8.1'
+    profile: minimal
+  - name: postgresql
+    stream: '15'
+    profile: client
+  - name: postgresql
+    stream: '15'
+    profile: server
+  - name: ruby
+    stream: '3.1'
+    profile: common
+  # CRB
+  - name: swig
+    stream: '4.1'
+    profile: common
+  - name: swig
+    stream: '4.1'
+    profile: complete
