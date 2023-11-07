@@ -5,7 +5,7 @@ name: default
 
 steps:
   - name: ansible-check
-    image: quay.io/lumarel/ee-lint:stable-2.12
+    image: quay.io/lumarel/ee-lint:stable-2.15
     commands:
       - "[ -f './collections/requirements.yml' ] && ansible-galaxy install -r ./collections/requirements.yml || echo 'No requirements file active.'"
       - "[ -f './roles/requirements.yml' ] && ansible-galaxy install -r ./roles/requirements.yml || echo 'No requirements file active.'"
