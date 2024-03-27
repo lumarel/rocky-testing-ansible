@@ -25,7 +25,7 @@ module_streams_8:
   - name: container-tools
     stream: '4.0'
     profile: common
-  - name: eclipse
+  - name: eclipse # fails on aarch64
     stream: rhel8
     profile: java
   - name: freeradius
@@ -76,7 +76,7 @@ module_streams_8:
   - name: jaxb
     stream: '4'
     profile: common
-  - name: jmc
+  - name: jmc # fails on aarch64
     stream: rhel8
     profile: common
   - name: jmc
@@ -226,10 +226,10 @@ module_streams_8:
   - name: parfait
     stream: '0.5'
     profile: common
-  - name: perl
+  - name: perl # always fails
     stream: '5.24'
     profile: common
-  - name: perl
+  - name: perl # always fails
     stream: '5.24'
     profile: minimal
   - name: perl
@@ -238,16 +238,16 @@ module_streams_8:
   - name: perl
     stream: '5.26'
     profile: minimal
-  - name: perl
+  - name: perl # always fails
     stream: '5.30'
     profile: common
-  - name: perl
+  - name: perl # always fails
     stream: '5.30'
     profile: minimal
-  - name: perl
+  - name: perl # always fails
     stream: '5.32'
     profile: common
-  - name: perl
+  - name: perl # always fails
     stream: '5.32'
     profile: minimal
   - name: perl-App-cpanminus
@@ -328,7 +328,7 @@ module_streams_8:
       - glassfish-jaxb-runtime
       - pki-servlet-engine
       - velocity
-  - name: pmdk
+  - name: pmdk # fails on aarch64
     stream: 1_fileformat_v6
     packages:
       - daxio
