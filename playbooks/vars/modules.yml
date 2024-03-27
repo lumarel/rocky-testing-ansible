@@ -162,6 +162,7 @@ module_streams_8:
     profile: common
   - name: nginx
     stream: '1.24'
+    profile: common
   - name: nodejs
     stream: '10'
     profile: common
