@@ -494,11 +494,23 @@ module_streams_8:
       - netcf-devel
 module_streams_9:
   # AppStream
+  - name: mariadb
+    stream: '10.11'
+    profile: client
+  - name: mariadb
+    stream: '10.11'
+    profile: galera
+  - name: mariadb
+    stream: '10.11'
+    profile: server
   - name: maven
     stream: '3.8'
     profile: common
   - name: nginx
     stream: '1.22'
+    profile: common
+  - name: nginx
+    stream: '1.24'
     profile: common
   - name: nodejs
     stream: '18'
@@ -533,17 +545,35 @@ module_streams_9:
   - name: php
     stream: '8.1'
     profile: minimal
+  - name: php
+    stream: '8.2'
+    profile: common
+  - name: php
+    stream: '8.2'
+    profile: devel
+  - name: php
+    stream: '8.2'
+    profile: minimal
   - name: postgresql
     stream: '15'
     profile: client
   - name: postgresql
     stream: '15'
     profile: server
+  - name: postgresql
+    stream: '16'
+    profile: client
+  - name: postgresql
+    stream: '16'
+    profile: server
   - name: redis
     stream: '7'
     profile: common
   - name: ruby
     stream: '3.1'
+    profile: common
+  - name: ruby
+    stream: '3.3'
     profile: common
   # CRB
   - name: swig
