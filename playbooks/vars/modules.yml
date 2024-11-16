@@ -536,6 +536,18 @@ module_streams_9:
   - name: nodejs
     stream: '20'
     profile: s2i
+  - name: nodejs
+    stream: '22'
+    profile: common
+  - name: nodejs
+    stream: '22'
+    profile: development
+  - name: nodejs
+    stream: '22'
+    profile: minimal
+  - name: nodejs
+    stream: '22'
+    profile: s2i
   - name: php
     stream: '8.1'
     profile: common
